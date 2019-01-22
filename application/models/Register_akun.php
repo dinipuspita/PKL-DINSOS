@@ -10,7 +10,7 @@ class Register_akun extends CI_Model {
         //Do your magic here
     }
 
-    public function insertDataDiri()
+    public function insertUser()
 
 	{
 		
@@ -20,7 +20,8 @@ class Register_akun extends CI_Model {
 						'level' => '2',						
 						'nama_lengkap' => $this->input->post('nama_lengkap'),
 						'email' => $this->input->post('email'),
-						'id_kecamatan' => $this->input->post('id_kecamatan')
+						'id_kecamatan' => $this->input->post('fk_kecamatan'),
+						'foto' => 'profil.png'
 					);
 		$this->db->insert('login', $object);
 	}
@@ -33,4 +34,13 @@ class Register_akun extends CI_Model {
 					
 		$this->db->insert('kecamatan', $object);
 	}
+	public function getTampil()
+	{
+		$id_kecamatan = $this->input->post('id_kecamatan');
+		$query = $this->db->query("Select * from login AS a join kecamatan AS b ON a.id_kecamatan=b.id_kecamatan WHERE a.id_kecamatan='$id_kecamatan'");
+		return $query->result_array();
+	}
+	
+	// 	$query = $this->db->query("Select * from laporan AS a Join login AS b ON a.id_user=b.id_user join kecamatan as e on e.id_kecamatan=b.id_kecamatan WHERE b.id_kecamatan='$id_kecamatan'");
+	// 	return $query->result_array();
 }

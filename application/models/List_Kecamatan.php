@@ -1,6 +1,6 @@
 <?php
 // define('BASEPATH') OR exit ('No direct script access allowed');
-class List_kecamatan extends CI_Model {
+class List_Kecamatan extends CI_Model {
 
 	public function insertKecamatan()
 	{
@@ -44,6 +44,19 @@ class List_kecamatan extends CI_Model {
 	public function getTampilKecamatan()
 	{
 		$query = $this->db->query("Select * from kecamatan");
+		return $query->result_array();
+	}
+		public function getTampilListKecamatan()
+	{
+		$query = $this->db->query("Select * from kecamatan");
+		return $query->result_array();
+	}
+	public function getUser()
+	{
+		$session_data = $this->session->userdata('logged_in');
+		$username = $session_data['username'];
+		$query = $this->db->query("SELECT * from login where username='$username'");
+		// var_dump($query);die();
 		return $query->result_array();
 	}
 

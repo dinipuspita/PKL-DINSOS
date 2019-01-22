@@ -143,12 +143,13 @@
                         <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i>Profil</a>
                               <?php } } ?>
                         </li>
+
                         <?php foreach ($user as $key) { ?>
-                        <?php if($key['level'] == '1') { ?>   
+                        <?php if($key['level'] == '1') { ?> 
                         <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-app"></i>Kecamatan</a>
-                        <?php } } ?>    
-                        </li>    
-                           
+                            <?php } } ?>
+                        </li>
+
                     </ul>
                   
                     <div class="tab-content custom-menu-content">
@@ -177,7 +178,6 @@
                                 </li>
                                 <li><a href='<?php echo base_url("index.php/ListProfil"); ?>'>Data Profil</a>
                                 </li>
-
                             </ul>                     
                         <?php } } ?>
 
@@ -190,6 +190,7 @@
                             </ul> 
                         <?php } } ?>  
                         </div>
+
                         <?php foreach ($user as $key) { ?>
                         <?php if($key['level'] == '1') { ?>
                          <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
@@ -197,9 +198,8 @@
                                 <li><a href='<?php echo base_url("index.php/ListKecamatan"); ?>'>Data Kecamatan</a>
                                 </li>
                             </ul>
-                        <?php } } ?>
-                         </div>
-
+                               <?php } } ?> 
+                           </div>
                     </div>
                  </div>
                    
@@ -207,115 +207,79 @@
         </div>
     </div>
  </div>
-<br>
-<br>
-     <div class="wrapper">
-        <div class="notika-status-area">
-            <div class="container">
-                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
-
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="<?php echo base_url() ?>assets/images/2.jpg" alt="Chania">
-      <div class="carousel-caption">
-        <h3>Balaikota Among Tani</h3>
-        <p>Kota Batu</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php echo base_url() ?>assets/images/3.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3>Shining Batu</h3>
-        <p>Beautiful Batu</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php echo base_url() ?>assets/images/7.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3>Panorama Batu</h3>
-        <p>Kota Batu</p>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
-</div>
-</div>
-    <!-- Main Menu area End-->
-    <!-- Start Status area -->
-    <br>
-    <?php foreach ($user as $key) { ?>
-    <?php if($key['level'] == '1') { ?>
-<div class="wrapper">
-    <div class="notika-status-area">
+   <div class="breadcomb-area">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahtksk as $login) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $login ?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Anggota TKSK</p>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                <div class="breadcomb-wp">
+                                    <div class="breadcomb-icon">
+                                        <i class="notika-icon notika-app"></i>
+                                    </div>
+                                    <div class="breadcomb-ctn">
+                                        <h2>Data Kecamatan</h2>
+                                        <p>Data Kecamatan di Kota Batu<span class="bread-ntd"></span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="sparkline-bar-stats2">1,4,8,3,5,6,4,8,3,3,9,5</div>
                     </div>
                 </div>
-                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahlaporan as $laporan) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $laporan ?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Laporan</p>
-                        </div>
-                        <div class="sparkline-bar-stats1">9,4,8,6,5,6,4,8,3,5,9,5</div>
-                    </div>
-                </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahkecamatan as $kecamatan) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $kecamatan?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Kecamatan</p>
-                        </div>
-                        <div class="sparkline-bar-stats4">2,4,8,4,5,7,4,7,3,5,7,5</div>
-                        </div>
-                    </div>
-               <?php } } ?>
             </div>
         </div>
     </div>
-<br>
+<div class="breadcomb-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="breadcomb-list">
+                       <div class="normal-table-list mg-t-30">
+                         <div class="basic-tb-hd">
+                              <div class="bsc-tbl-bdr">
+                                 <table class="table table-bordered">
+
+                                <a href="<?php echo base_url('index.php/ListKecamatan/create/')?>" class="btn btn-success">Kecamatan <span class="glyphicon glyphicon-plus"></a>
+                                <br><br>
+                                    <thead>
+                                        <tr>
+                                            <tr class="success">
+                                            <th>No</td>
+                                            <th>Nama Kecamatan</td>
+                                            <th>Options</td>
+                                           
+                                          <tr>
+                                            <?php $no=1; ?>
+                                               <?php foreach ($kecamatan as $key) {
+                                            ?>
+                                        
+                                          <td><?php echo $no ?></td>
+                                          <td><?php echo $key['nama_kecamatan'] ?></td>
+                                    
+                                          <td><a href="<?php echo base_url('index.php/ListKecamatan/update/'.$key['id_kecamatan'])?>" class="btn btn-info">Update <span class="glyphicon glyphicon-pencil"></a>
+
+                                           <a href="<?php echo base_url('index.php/ListKecamatan/delete/' .$key['id_kecamatan'])?>" class="btn btn-danger">Delete <span class="glyphicon glyphicon-trash"></a></td>  
+
+                                      </tr> 
+                                    </tbody>
+                                <?php $no++ ?>
+                                    <?php  } ?>
+                          </tr>
+                          </thead>
+                          </table>
+                          </div>
+                          </div>
+                          </div>
+                      </div>
+                      </div>
+                  </div>    
+                  </div>   
+
  
-           
-   
     <!-- End Realtime sts area-->
     <!-- Start Footer area-->
-    <div class="footer-copyright-area">
+     <div class="footer-copyright-area">
         <div class="container">     
           <div class="col-md">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -355,9 +319,7 @@
             </div>
           </div>
         </div>
-    
-                    
-       <!-- End Footer area-->
+      <!-- End Footer area-->
     <!-- jquery
         ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/vendor/jquery-1.12.4.min.js"></script>
@@ -422,7 +384,7 @@
     <script src="<?php echo base_url() ?>assets/js/main.js"></script>
     <!-- tawk chat JS
         ============================================ -->
-   
+ 
 </body>
 
 </html>

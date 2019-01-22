@@ -1,65 +1,123 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Laporan|Data Laporan</title>
+    <title>Dashboard</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- favicon
+        ============================================ -->
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>assets/img/favicon.ico">
+    <!-- Google Fonts
+        ============================================ -->
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <!-- Bootstrap CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
+    <!-- font awesome CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/font-awesome.min.css">
+    <!-- owl.carousel CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.carousel.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.theme.css">
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/owl.transitions.css">
+    <!-- meanmenu CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/meanmenu/meanmenu.min.css">
+    <!-- animate CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css">
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animation/animation-custom.css">
+    <!-- normalize CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/normalize.css">
+    <!-- mCustomScrollbar CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/scrollbar/jquery.mCustomScrollbar.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/jvectormap/jquery-jvectormap-2.0.3.css">
+    <!-- Notika icon CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/notika-custom-icon.css">
+    <!-- wave CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/wave/waves.min.css">
+    <!-- main CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/main.css">
+    <!-- style CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/style.css">
+    <!-- responsive CSS
+        ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/responsive.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/wave/waves.min.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/wave/button.css">
+    <!-- modernizr JS
+        ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+ /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: right;
+  margin-top:-110px;
+  width: 100%;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
 
 <body>
-    
-       <!--[if lt IE 8]>
+
+    <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="<?php echo base_url() ?>assets/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
     <!-- Start Header Top Area -->
     <div class="header-top-area">
         <div class="container">
             <div class="row">
+                 <div class="column">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="50px" height="50px"/></a>
+                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="75px" height="75px"/></a>
                         </div>
-                            <div align="left"><h4><b>Dinas Sosial Kota Batu</b></h4>
+                    </div>
+                <div class="row">
+                    <div class="column2">
+                        <div align="right"><h4><b>Dinas Sosial Kota Batu</b></h4>
                                  <font color="white">
                                 <h5>Lembaga Swadaya Masyarakat (LSM) Jawa Timur</p>
-                                    Balaikota Amongtani Gedung B Lantai 2</p>
+                                    <p>Balaikota Amongtani Gedung B Lantai 2</p>
                                     Jl.Panglima Sudirman No.507, Pesanggrahan Kec.Batu, Kota Batu, Jawa Timur 65314</h5></font></div>
+                        <div align="right">
+                        <ul class="nav navbar-top-links navbar-right pull-right">
+                        <a href="<?php echo base_url('index.php/logout/out')?>" class="btn btn-danger" style="height: 50px;"><h4 style="color: white"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>Logout</h4></a><br></ul></div>   
+                        </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+     </div>
 </div>
- 
-    <!-- End Header Top Area -->
-    <!-- Mobile Menu start -->
 
-    <!-- Mobile Menu end -->
-    <!-- Main Menu area start-->
     <div class="main-menu-area mg-tb-40">
         <div class="container">
             <div class="row">
@@ -67,15 +125,33 @@
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                         <li class="active"><a data-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
                         </li>
-                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i> Buat Laporan</a>
+                        <?php foreach ($user as $key) { ?>
+                         <?php if($key['level'] == '2') { ?> 
+                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i>Laporan</a>
+                        <?php } } ?>
+
+                         <?php foreach ($user as $key) { ?>
+                         <?php if($key['level'] == '1') { ?>    
+                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i>Laporan</a>    
                         </li>
-                       <!--  <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-app"></i> Bantuan</a>
+                        
+                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i>Data</a>
+                              <?php } } ?>
                         </li>
-                        <li><a data-toggle="tab" href="#Tables"><i class="notika-icon notika-windows"></i> Desa</a>
+                        <?php foreach ($user as $key) { ?>
+                        <?php if($key['level'] == '2') { ?>    
+                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i>Profil</a>
+                              <?php } } ?>
                         </li>
-                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Penduduk</a>
-                        </li> -->
+
+                        <?php foreach ($user as $key) { ?>
+                        <?php if($key['level'] == '1') { ?> 
+                        <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-app"></i>Kecamatan</a>
+                            <?php } } ?>
+                        </li>
+
                     </ul>
+                  
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
@@ -85,56 +161,53 @@
                         </div>
                         <div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
+                                <?php foreach ($user as $key) { ?>
+                                <?php if($key['level'] == '2') { ?>
                                 <li><a href='<?php echo base_url("index.php/ListLaporan/create/"); ?>'>Buat Laporan Kegiatan</a>
+                                <?php } } ?>
                                 </li>
                                 <li><a href='<?php echo base_url("index.php/ListLaporan/"); ?>'>Lihat Laporan Kegiatan</a>
                                 </li>
                             </ul>
                         </div>
-                       <!--  <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListBantuan"); ?>'>Data Bantuan</a>
-                                </li>
-                                <li><a href="bar-charts.html">Syarat & Ketentuan</a>
-                                </li>
-                                <li><a href="line-charts.html">Cek Penduduk</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListDesa"); ?>'>Data Desa</a>
-                                </li>
-                                <li><a href='<?php echo base_url("index.php/ListKepalaDesa"); ?>'>Data Kepala Desa</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li><a href="form-components.html">Form Components</a>
-                                </li>
-                                <li><a href="form-examples.html">Form Examples</a>
-                                </li>
-                            </ul>
-                        </div>
+                        <?php foreach ($user as $key) { ?>
+                        <?php if($key['level'] == '1') { ?>
                         <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListPenduduk"); ?>'>Data Penduduk</a>
+                                <li><a href='<?php echo base_url("index.php/ListTksk"); ?>'>Data Anggota TKSK</a>
                                 </li>
-                                <li><a href="invoice.html">Tambah Penduduk</a>
+                                <li><a href='<?php echo base_url("index.php/ListProfil"); ?>'>Data Profil</a>
                                 </li>
-                                <li><a href="typography.html">Cek Penduduk</a>
+                            </ul>                     
+                        <?php } } ?>
+
+                        <?php foreach ($user as $key) { ?>
+                        <?php if($key['level'] == '2') { ?>
+                        <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href='<?php echo base_url("index.php/ListProfil"); ?>'>Data Profil</a>
+                                </li>
+                            </ul> 
+                        <?php } } ?>  
+                        </div>
+
+                        <?php foreach ($user as $key) { ?>
+                        <?php if($key['level'] == '1') { ?>
+                         <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
+                            <ul class="notika-main-menu-dropdown">
+                                <li><a href='<?php echo base_url("index.php/ListKecamatan"); ?>'>Data Kecamatan</a>
                                 </li>
                             </ul>
-                        </div>
-                    </div> -->
+                               <?php } } ?> 
+                           </div>
                     </div>
-                </div>
+                 </div>
+                   
             </div>
         </div>
     </div>
+ </div>
+<br>
    <div class="breadcomb-area">
         <div class="container">
             <div class="row">
@@ -152,6 +225,23 @@
                                     </div>
                                 </div>
                             </div>
+                            <?php foreach ($user as $key) { ?>
+                            <?php if($key['level'] == '1') { ?>
+                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
+                                <div class="breadcomb-report">
+                                    <a href="<?php echo base_url('index.php/ListLaporan/report')?>" button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button></a>
+                                </div>
+                            </div>
+                            <?php } } ?>
+
+                             <?php foreach ($user as $key) { ?>
+                            <?php if($key['level'] == '2') { ?>
+                             <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
+                                <div class="breadcomb-report">
+                                    <a href="<?php echo base_url('index.php/ListLaporan/reportUser')?>" button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button></a>
+                                </div>
+                            </div>
+                            <?php } } ?>
                         </div>
                     </div>
                 </div>
@@ -173,52 +263,85 @@
                                         <tr>
                                             <tr class="success">
                                             <th>No</td>
+                                         <?php foreach ($user as $key) { ?>
+                                         <?php if($key['level'] == '1') { ?>
+                                            <th>Nama Tksk</td>
+                                            <th>Kecamatan</td>
+                                         <?php } } ?>
                                             <th>Hari/Tanggal</th>
-                                            <th>Uraian dan Tempat Kegiatan</th>
-                                            <th>Pelaksana Kegiatan</th>
-                                            <th>Sasaran 1) dan Pihak yang dilibatkan 2)</th>
-                                            <th>Materi</th>
-                                            <th>Hasil Kegiatan</th>
-                                            <th>Faktor Pendukung & Penghambat</th>
-                                            <th>upaya Pemecahan Masalah</th>
-                                            <th>Rencana Kerja Berikut</th>
+                                            <th>Pelaksana Kegiatan</th>   
+                                            <th>Status</th>
+                                        <?php if($key['level'] == '1') { ?>
+                                            <th>Konfirmasi</th>
+                                         <?php }  ?> 
                                             <th>Options</th>
+                                      
+                                      
                                             
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
+                                            <?php foreach ($user as $tes) { ?>
+                                            <?php if($tes['level'] == '2') { ?>
                                             <?php $no=1; ?>
-                                               <?php foreach ($laporan as $key) {
+                                               <?php foreach ($laporanByUser as $key) {
                                             ?>
                                         
                                           <td><?php echo $no ?></td>
                                           <td><?php echo $key['tanggal'] ?></td>
-                                          <td><?php echo $key['uraian_tempat'] ?></td>
                                           <td><?php echo $key['pelaksana'] ?></td>
-                                          <td><?php echo $key['sasaran'] ?></td>
-                                          <td><?php echo $key['materi'] ?></td>
-                                          <td><?php echo $key['hasil_kegiatan'] ?></td>
-                                          <td><?php echo $key['faktor_pendukung_penghambat'] ?></td>
-                                          <td><?php echo $key['upaya_pemecahan'] ?></td>
-                                          <td><?php echo $key['rencana_kerja'] ?></td>
+                                          <td><?php echo $key['status'] ?></td>
+                                          <td><?php if($key['status']=='menunggu Konfirmasi') { ?>
+                                          <?php } ?>
+                                     
+                                           
+                                              <a href="<?php echo base_url('index.php/ListLaporan/update/' .$key['id_laporan'])?>" class="btn btn-info">Edit <span class="glyphicon glyphicon-pencil"></a>
 
-                                      <!--   <div class="button-icon-btn button-icon-btn-cl sm-res-mg-t-30">
+                                              <a href="<?php echo base_url('index.php/ListLaporan/delete/' .$key['id_laporan'])?>" class="btn btn-danger">Delete<span class="glyphicon glyphicon-trash"></a>
 
-                                        <td><a href="<?php echo base_url('index.php/listLaporan/update/'.$key['id_laporan'])?>" class="btn btn-cyan cyan-icon-notika btn-reco-mg btn-button-mg" data-toggle="tooltip" data-placement="left" title="Edit Data"><i class="notika-icon notika-checked"></i></button></a>
+                                              <a href="<?php echo base_url('index.php/ListLaporan/detail/' .$key['id_laporan'])?>" class="btn btn-success">Detail <span class="glyphicon glyphicon-th-list"></a></td>
 
-                                        <a href="<?php echo base_url('index.php/listLaporan/delete/'.$key['id_laporan'])?>" class="btn btn-danger danger-icon-notika btn-reco-mg btn-button-mg" data-toggle="tooltip" data-placement="bottom" title="Delete Data"><i class="notika-icon notika-close"></i></button></a>
-                                        </div> -->
-                                            
-                                            </td>
-                                              <td><a href="<?php echo base_url('index.php/ListLaporan/update/' .$key['id_laporan'])?>" class="btn btn-info">Edit <span class="glyphicon glyphicon-pencil"></a>
-
-                                            
-                                              <a href="<?php echo base_url('index.php/ListLaporan/delete/' .$key['id_laporan'])?>" class="btn btn-danger">Delete<span class="glyphicon glyphicon-trash"></a></td>    
                                       </tr> 
                                     </tbody>
                                 <?php $no++ ?>
                                     <?php  } ?>
+                                     <?php  } ?>
+                                        <?php  } ?>
+                                      
+                                        
+                                     
+                                        <?php if($tes['level'] == '1'){ ?>
+                                                <?php $no=1; ?>
+                                                <?php foreach ($laporan as $key) { ?>
+                                                <tr>
+
+                                          <td><?php echo $no ?></td> 
+                                          <td><?php echo $key['nama_lengkap'] ?></td>
+                                          <td><?php echo $key['nama_kecamatan'] ?></td>
+                                          <td><?php echo $key['tanggal'] ?></td>
+                                          <td><?php echo $key['pelaksana'] ?></td>
+                                          <td><?php echo $key['status'] ?></td>
+                                          <td><?php if($key['status']=='Menunggu Konfirmasi') { ?>
+
+                                   
+                                          <a href="<?php echo base_url('index.php/ListLaporan/konfirmasi/' .$key['id_laporan'])?>" class="btn btn-warning">Konfirmasi<span class="glyphicon glyphicon-ok"></a><?php } ?></td>
+
+                                          <td><a href="<?php echo base_url('index.php/ListLaporan/delete/' .$key['id_laporan'])?>" class="btn btn-danger">Delete<span class="glyphicon glyphicon-trash"></a>
+
+                                          <a href="<?php echo base_url('index.php/ListLaporan/detail/' .$key['id_laporan'])?>" class="btn btn-success">Detail <span class="glyphicon glyphicon-th-list"></a></td>
+
+
+
+
+                                                  
+                          
+                                           </tr> 
+                                    </tbody>
+                                <?php $no++ ?>
+                                         <?php  } ?>
+                                   <?php  } ?>
+
                                 </table>
                             </div>
                         </div>    
@@ -228,21 +351,46 @@
         </div>
     </div>
    
+ <div class="footer-copyright-area">
+        <div class="container">     
+          <div class="col-md">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="https://www.google.com/maps/place/Social+Service+Batu+City/@-7.8661852,112.5132408,15z/data=!4m5!3m4!1s0x0:0xadce265e5e9d00de!8m2!3d-7.8661852!4d112.5132408" class="py-2 d-block"><font color="black"><h5>Alamat:</h5></font> Balai Kota Among Tani, Jl. Panglima Sudirman No.507, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur 65314</a></li><br>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <h2 class="ftco-heading-2">Jam Buka</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Thursday    7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Friday  7AM–2PM</a></li>
+                <li><a href="#" class="py-2 d-block">Saturday    Closed</a></li>
+                <li><a href="#" class="py-2 d-block">Sunday  Closed</a></li>
+                <li><a href="#" class="py-2 d-block">Monday  7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Tuesday 7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Wednesday   7:30AM–4PM</a></li>
 
-       <!-- End Realtime sts area-->
-    <!-- Start Footer area-->
-    <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2018 
-. Sistem Pelayanan Bantuan dan Pengajuan SKTM</a>.</p>
-                    </div>
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <h2 class="ftco-heading-2">Contact Us</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                 <li><a href="#" class="py-2 d-block"><font color="black"><h5>Telepon:</h5></font>(0341) 592200</a></li>
+
+
+                  </ul>
                 </div>
             </div>
+          </div>
         </div>
-    </div>
       <!-- End Footer area-->
     <!-- jquery
         ============================================ -->
@@ -308,7 +456,7 @@
     <script src="<?php echo base_url() ?>assets/js/main.js"></script>
     <!-- tawk chat JS
         ============================================ -->
-    <script src="<?php echo base_url() ?>assets/js/tawk-chat.js"></script>
+ 
 </body>
 
 </html>

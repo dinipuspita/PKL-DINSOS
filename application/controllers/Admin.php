@@ -28,11 +28,31 @@ class Admin extends CI_Controller {
 
 	public function index()
 	{
-
-		$this->load->view('index');
+		$data['jumlahtksk'] = $this->Dashboardmod->getTksk();
+		$data['jumlahlaporan'] = $this->Dashboardmod->getLaporan();
+		$data['jumlahkecamatan'] = $this->Dashboardmod->getKecamatan();
+		$data["user"] = $this->Dashboardmod->getUser();
+		$this->load->view('index',$data);
 	}
 	
+	public function tksk()
+	{
+		$this->load->view('tksk');
+	}
 
+	public function laporan()
+	{
+		$this->load->view('laporan');
+	}
+	public function kecamatan()
+	{
+		$this->load->view('kecamatan');
+	}
+
+	public function error()
+	{
+		$this->load->view('404');
+	}
 }
 
 /* End of file Admin.php */

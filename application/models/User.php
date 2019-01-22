@@ -18,4 +18,14 @@ class User extends CI_Model{
 			return false;
 		}
 	}
+	public function getTampilLaporan()
+	{
+		$query = $this->db->query("Select * from login");
+		return $query->result_array();
+	}
+	public function getTampil()
+	{
+		$query = $this->db->query("Select * from login");
+		return $query->result_array();
+	}
 }

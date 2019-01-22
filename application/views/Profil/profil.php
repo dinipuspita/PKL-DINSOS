@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Dashboard</title>
+    <title>Penduduk |Input Data Penduduk</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -12,7 +12,8 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url() ?>assets/img/favicon.ico">
     <!-- Google Fonts
         ============================================ -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet">
+
     <!-- Bootstrap CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap.min.css">
@@ -30,7 +31,12 @@
     <!-- animate CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animate.css">
-    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/animation/animation-custom.css">
+    <!-- summernote CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/summernote/summernote.css">
+    <!-- Range Slider CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/themesaller-forms.css">
     <!-- normalize CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/normalize.css">
@@ -40,6 +46,24 @@
     <!-- Notika icon CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/notika-custom-icon.css">
+    <!-- bootstrap select CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/bootstrap-select/bootstrap-select.css">
+    <!-- datapicker CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/datapicker/datepicker3.css">
+    <!-- Color Picker CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/color-picker/farbtastic.css">
+    <!-- main CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/chosen/chosen.css">
+    <!-- notification CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/notification/notification.css">
+    <!-- dropzone CSS
+        ============================================ -->
+    <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/dropzone/dropzone.css">
     <!-- wave CSS
         ============================================ -->
     <link rel="stylesheet" href="<?php echo base_url() ?>assets/css/wave/waves.min.css">
@@ -56,34 +80,9 @@
         ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
-<style>
-* {
-  box-sizing: border-box;
-}
-
-/* Create two equal columns that floats next to each other */
-.column {
-  float: left;
-  width: 100%;
- /* Should be removed. Only for demonstration */
-}
-.column2 {
-  float: right;
-  margin-top:-110px;
-  width: 100%;
-  }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-</style>
-
 
 <body>
-
+   
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="<?php echo base_url() ?>assets/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -91,34 +90,26 @@
     <div class="header-top-area">
         <div class="container">
             <div class="row">
-                 <div class="column">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="75px" height="75px"/></a>
+                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="50px" height="50px"/></a>
                         </div>
-                    </div>
-                <div class="row">
-                    <div class="column2">
-                        <div align="right"><h4><b>Dinas Sosial Kota Batu</b></h4>
+                            <div align="left"><h4><b>Dinas Sosial Kota Batu</b></h4>
                                  <font color="white">
                                 <h5>Lembaga Swadaya Masyarakat (LSM) Jawa Timur</p>
-                                    <p>Balaikota Amongtani Gedung B Lantai 2</p>
+                                    Balaikota Amongtani Gedung B Lantai 2</p>
                                     Jl.Panglima Sudirman No.507, Pesanggrahan Kec.Batu, Kota Batu, Jawa Timur 65314</h5></font></div>
-                        <div align="right">
-                        <ul class="nav navbar-top-links navbar-right pull-right">
-                        <a href="<?php echo base_url('index.php/logout/out')?>" class="btn btn-danger" style="height: 50px;"><h4 style="color: white"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>Logout</h4></a><br></ul></div>   
-                        </ul>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-     </div>
+    </div>
 </div>
-
-    <div class="main-menu-area mg-tb-40">
+ 
+  
+ 
+  <div class="main-menu-area mg-tb-40">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -206,116 +197,55 @@
             </div>
         </div>
     </div>
- </div>
-<br>
-<br>
-     <div class="wrapper">
-        <div class="notika-status-area">
-            <div class="container">
-                 <div id="myCarousel" class="carousel slide" data-ride="carousel">
-  <!-- Indicators -->
-  <ol class="carousel-indicators">
-    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    <li data-target="#myCarousel" data-slide-to="1"></li>
-    <li data-target="#myCarousel" data-slide-to="2"></li>
-  </ol>
+ </div><br>
 
-  <!-- Wrapper for slides -->
-  <div class="carousel-inner">
-    <div class="item active">
-      <img src="<?php echo base_url() ?>assets/images/2.jpg" alt="Chania">
-      <div class="carousel-caption">
-        <h3>Balaikota Among Tani</h3>
-        <p>Kota Batu</p>
-      </div>
-    </div>
+<body>
+     <?php foreach ($login  as $key) {
+                                ?>
+                                <?php echo form_open_multipart('listProfil/update'); ?> 
+                                <?php echo validation_errors(); ?>  
 
-    <div class="item">
-      <img src="<?php echo base_url() ?>assets/images/3.jpg" alt="Chicago">
-      <div class="carousel-caption">
-        <h3>Shining Batu</h3>
-        <p>Beautiful Batu</p>
-      </div>
-    </div>
-
-    <div class="item">
-      <img src="<?php echo base_url() ?>assets/images/7.jpg" alt="New York">
-      <div class="carousel-caption">
-        <h3>Panorama Batu</h3>
-        <p>Kota Batu</p>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Left and right controls -->
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev">
-    <span class="glyphicon glyphicon-chevron-left"></span>
-    <span class="sr-only">Previous</span>
-  </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next">
-    <span class="glyphicon glyphicon-chevron-right"></span>
-    <span class="sr-only">Next</span>
-  </a>
+<div class="breadcomb-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-20 col-md-20 col-sm-20 col-xs-20">
+                <div class="breadcomb-list">
+                    <center><h1>Profile</h1></center>
+                        <center><img src="<?php echo base_url('assets/uploads/'.$key['foto']) ?>" img class="img-circle" width=150; height=150><br>
+         <div align="left">                              
+              
+             <div class="form-group">
+                                    <label class="col-md-12">Nama Lengkap</label>
+                                         <div class="col-md-12"> 
+                                            <font color="teal"><h3><?php echo $key['nama_lengkap']; ?></h3></font>
+                                    </div>
+              <div class="form-group">
+                                    <label class="col-md-12">Username</label>
+                                         <div class="col-md-12"> 
+                                                <font color="teal"><h3><?php echo $key['username']; ?></h3></font>
+                                    </div>
+                                         
+              <div class="form-group">
+                                    <label class="col-md-12">Email</label>
+                                            <div class="col-md-12"> 
+                                                 <font color="teal"><h3><?php echo $key['email']; ?></h3></font>
+                                    </div>                    
+                                </div>                                                                                 
+    <center>
+        <a href="<?php echo base_url('index.php/Admin')?>"class="btn btn-danger">Back</a>
+        <a href="listProfil/update/<?php echo $key['id_user'];  ?>"class="btn btn-success"><i class="fa fa-edit fa-fw" aria-hidden="true"></i>Update Profil</a></td>
+<?php  } ?>           
+</center>
+                               
 </div>
 </div>
-    <!-- Main Menu area End-->
-    <!-- Start Status area -->
-    <br>
-    <?php foreach ($user as $key) { ?>
-    <?php if($key['level'] == '1') { ?>
-<div class="wrapper">
-    <div class="notika-status-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahtksk as $login) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $login ?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Anggota TKSK</p>
-                        </div>
-                        <div class="sparkline-bar-stats2">1,4,8,3,5,6,4,8,3,3,9,5</div>
-                    </div>
-                </div>
-                 <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahlaporan as $laporan) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $laporan ?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Laporan</p>
-                        </div>
-                        <div class="sparkline-bar-stats1">9,4,8,6,5,6,4,8,3,5,9,5</div>
-                    </div>
-                </div>
-                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12">
-                    <div class="wb-traffic-inner notika-shadow sm-res-mg-t-30 tb-res-mg-t-30 dk-res-mg-t-30">
-                        <div class="website-traffic-ctn">
-                            <h1>
-                                <?php foreach ($jumlahkecamatan as $kecamatan) { ?>
-                                <i class="ti-arrow-up text-success"></i> <span class="counter text-success"><?php echo $kecamatan?></span></li>
-                                <?php } ?></h1>
-                            <p>Jumlah Kecamatan</p>
-                        </div>
-                        <div class="sparkline-bar-stats4">2,4,8,4,5,7,4,7,3,5,7,5</div>
-                        </div>
-                    </div>
-               <?php } } ?>
-            </div>
-        </div>
-    </div>
-<br>
- 
-           
-   
-    <!-- End Realtime sts area-->
-    <!-- Start Footer area-->
-    <div class="footer-copyright-area">
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+  <div class="footer-copyright-area">
         <div class="container">     
           <div class="col-md">
             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
@@ -355,74 +285,79 @@
             </div>
           </div>
         </div>
-    
-                    
-       <!-- End Footer area-->
+
+
+
+    <!-- End Footer area-->
     <!-- jquery
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/vendor/jquery-1.12.4.min.js"></script>
+
     <!-- bootstrap JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/bootstrap.min.js"></script>
     <!-- wow JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/wow.min.js"></script>
     <!-- price-slider JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/jquery-price-slider.js"></script>
     <!-- owl.carousel JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/owl.carousel.min.js"></script>
     <!-- scrollUp JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/jquery.scrollUp.min.js"></script>
     <!-- meanmenu JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/meanmenu/jquery.meanmenu.js"></script>
     <!-- counterup JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/counterup/jquery.counterup.min.js"></script>
     <script src="<?php echo base_url() ?>assets/js/counterup/waypoints.min.js"></script>
     <script src="<?php echo base_url() ?>assets/js/counterup/counterup-active.js"></script>
     <!-- mCustomScrollbar JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
+    <!-- jvectormap JS
+    ============================================ -->
+    <script src="<?php echo base_url() ?>assets/js/jvectormap/jquery-jvectormap-2.0.2.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/jvectormap/jvectormap-active.js"></script>
     <!-- sparkline JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/sparkline/jquery.sparkline.min.js"></script>
     <script src="<?php echo base_url() ?>assets/js/sparkline/sparkline-active.js"></script>
-    <!-- flot JS
-        ============================================ -->
+    <!-- sparkline JS
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/flot/jquery.flot.js"></script>
     <script src="<?php echo base_url() ?>assets/js/flot/jquery.flot.resize.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/flot/curvedLines.js"></script>
     <script src="<?php echo base_url() ?>assets/js/flot/flot-active.js"></script>
     <!-- knob JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/knob/jquery.knob.js"></script>
     <script src="<?php echo base_url() ?>assets/js/knob/jquery.appear.js"></script>
     <script src="<?php echo base_url() ?>assets/js/knob/knob-active.js"></script>
     <!--  wave JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/wave/waves.min.js"></script>
     <script src="<?php echo base_url() ?>assets/js/wave/wave-active.js"></script>
-    <!--  animation JS
-        ============================================ -->
-    <script src="<?php echo base_url() ?>assets/js/animation/animation-active.js"></script>
-    <!--  Chat JS
-        ============================================ -->
-    <script src="<?php echo base_url() ?>assets/js/chat/jquery.chat.js"></script>
     <!--  todo JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/todo/jquery.todo.js"></script>
     <!-- plugins JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/plugins.js"></script>
+  <!--  Chat JS
+    ============================================ -->
+    <script src="<?php echo base_url() ?>assets/js/chat/moment.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/js/chat/jquery.chat.js"></script>
     <!-- main JS
-        ============================================ -->
+    ============================================ -->
     <script src="<?php echo base_url() ?>assets/js/main.js"></script>
-    <!-- tawk chat JS
-        ============================================ -->
-   
+  <!-- tawk chat JS
+    ============================================ -->
 </body>
 
 </html>

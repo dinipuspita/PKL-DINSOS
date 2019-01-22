@@ -19,7 +19,6 @@ class Login extends CI_Controller {
 				}
 			}
 		}
-			// $this->load->view('tampil_user',$data);
 	}
 
 

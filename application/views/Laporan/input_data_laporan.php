@@ -81,8 +81,34 @@
     <script src="<?php echo base_url() ?>assets/js/vendor/modernizr-2.8.3.min.js"></script>
 </head>
 
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 100%;
+ /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: right;
+  margin-top:-110px;
+  width: 100%;
+  }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+
 <body>
-   
+
     <!--[if lt IE 8]>
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="<?php echo base_url() ?>assets/http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
@@ -90,22 +116,33 @@
     <div class="header-top-area">
         <div class="container">
             <div class="row">
+                 <div class="column">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                     <div class="logo-area">
-                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="50px" height="50px"/></a>
+                        <div align="left"><h4><a href="#"><img src="<?php echo base_url() ?>assets/img/logo/satu.png" alt="" width="75px" height="75px"/></a>
                         </div>
-                            <div align="left"><h4><b>Dinas Sosial Kota Batu</b></h4>
+                    </div>
+                <div class="row">
+                    <div class="column2">
+                        <div align="right"><h4><b>Dinas Sosial Kota Batu</b></h4>
                                  <font color="white">
                                 <h5>Lembaga Swadaya Masyarakat (LSM) Jawa Timur</p>
-                                    Balaikota Amongtani Gedung B Lantai 2</p>
+                                    <p>Balaikota Amongtani Gedung B Lantai 2</p>
                                     Jl.Panglima Sudirman No.507, Pesanggrahan Kec.Batu, Kota Batu, Jawa Timur 65314</h5></font></div>
+                        <div align="right">
+                        <ul class="nav navbar-top-links navbar-right pull-right">
+                        <a href="<?php echo base_url('index.php/logout/out')?>" class="btn btn-danger" style="height: 50px;"><h4 style="color: white"><i class="fa fa-sign-out fa-fw" aria-hidden="true"></i>Logout</h4></a><br></ul></div>   
+                        </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+     </div>
 </div>
+
  
     <!-- End Header Top Area -->
     <!-- Mobile Menu start -->
@@ -119,14 +156,10 @@
                     <ul class="nav nav-tabs notika-menu-wrap menu-it-icon-pro">
                         <li class="active"><a data-toggle="tab" href="#Home"><i class="notika-icon notika-house"></i> Home</a>
                         </li>
-                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i> Buat Laporan</a>
+                        <li><a data-toggle="tab" href="#Interface"><i class="notika-icon notika-edit"></i>Laporan</a>
                         </li>
-                       <!--  <li><a data-toggle="tab" href="#Charts"><i class="notika-icon notika-app"></i> Bantuan</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Tables"><i class="notika-icon notika-windows"></i> Desa</a>
-                        </li>
-                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i> Penduduk</a>
-                        </li> -->
+                        <li><a data-toggle="tab" href="#Page"><i class="notika-icon notika-support"></i>Profil</a>
+                        </li>    
                     </ul>
                     <div class="tab-content custom-menu-content">
                         <div id="Home" class="tab-pane in active notika-tab-menu-bg animated flipInX">
@@ -137,56 +170,23 @@
                         </div>
                         <div id="Interface" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListSurat/create/"); ?>'>Buat Laporan Kegiatan</a>
+                                <li><a href='<?php echo base_url("index.php/ListLaporan/create/"); ?>'>Buat Laporan Kegiatan</a>
                                 </li>
                                 <li><a href='<?php echo base_url("index.php/ListLaporan/"); ?>'>Lihat Laporan Kegiatan</a>
                                 </li>
                             </ul>
                         </div>
-                       <!--  <div id="Charts" class="tab-pane notika-tab-menu-bg animated flipInX">
+                         <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
                             <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListBantuan"); ?>'>Data Bantuan</a>
+                                <li><a href='<?php echo base_url("index.php/ListProfil"); ?>'>Data Profil</a>
                                 </li>
-                                <li><a href="bar-charts.html">Syarat & Ketentuan</a>
-                                </li>
-                                <li><a href="line-charts.html">Cek Penduduk</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Tables" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListDesa"); ?>'>Data Desa</a>
-                                </li>
-                                <li><a href='<?php echo base_url("index.php/ListKepalaDesa"); ?>'>Data Kepala Desa</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Forms" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href="form-elements.html">Form Elements</a>
-                                </li>
-                                <li><a href="form-components.html">Form Components</a>
-                                </li>
-                                <li><a href="form-examples.html">Form Examples</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div id="Page" class="tab-pane notika-tab-menu-bg animated flipInX">
-                            <ul class="notika-main-menu-dropdown">
-                                <li><a href='<?php echo base_url("index.php/ListPenduduk"); ?>'>Data Penduduk</a>
-                                </li>
-                                <li><a href="invoice.html">Tambah Penduduk</a>
-                                </li>
-                                <li><a href="typography.html">Cek Penduduk</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div> -->
+                            </ul> 
                 </div>
             </div>
         </div>
     </div>
 </div>
+<br>
    <div class="breadcomb-area">
         <div class="container">
             <div class="row">
@@ -204,11 +204,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-3">
-                                <div class="breadcomb-report">
-                                    <button data-toggle="tooltip" data-placement="left" title="Download Report" class="btn"><i class="notika-icon notika-sent"></i></button>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -218,17 +213,13 @@
     <?php echo form_open_multipart('ListLaporan/create'); 
         
         echo validation_errors();
-                    $id = 1;
+                  
                 ?>
                 
-                <?php foreach ($last as $key){
-                    $id = $key['id_laporan']+1;                    
-                }
-                 ?>               
+                     
 
-                <div class="form-group">
-                    <input type="hidden" class="form-control" id="id_laporan" name="id_laporan" value="<?php echo $id ?>">
-                </div>
+
+            
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -236,23 +227,13 @@
                         <div class="basic-tb-hd">
                             <h2>Data Pelaksanaan</h2><br>
                         <div class="row">
-                         <!--    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
-                                <div class="form-group ic-cmp-int">
-                                    <div class="form-ic-cmp">
-                                        <i class="notika-icon notika-support"></i>
-                                    </div>
-                                    <div class="nk-int-st">
-                                        <input type="text" class="form-control" id="id_user" name="id_user" placeholder="Nama Lengkap">
-                                    </div>
-                                </div>
-                            </div> -->
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
                                 <div class="form-group ic-cmp-int">
                                     <div class="form-ic-cmp">
-                                        <i class="notika-icon notika-edit"></i>
+                                        <i class="notika-icon notika-calendar"></i>
                                     </div>
                                     <div class="nk-int-st">
-                                        <input type="text" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal Kegiatan(DD-MM-YYYY)">
+                                        <input type="date" class="form-control" id="tanggal" name="tanggal" placeholder="Tanggal Kegiatan(DD-MM-YYYY)">
                                     </div>
                                 </div>
                             </div>
@@ -303,6 +284,8 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
             <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -350,13 +333,15 @@
                                     </div>
                                 </div>
                             </div>
+                            <label for="">Foto Kegiatan</label>
+                            <input type="file" name="userfile" size="20"/>
                          </div>
                     <br>
                      <font color="red"><i>* Wajib diisi</i></font>
                     <br>
                     <center>
-                    <button type="submit" class="btn btn-success">Submit</button>
-                            <a href="<?php echo base_url('index.php/ListLaporan')?>"class="btn btn-danger">Back</a></td>
+                    <button type="submit" class="btn btn-success">Submit <span class="glyphicon glyphicon-send"></button></span>
+                            <a href="<?php echo base_url('index.php/ListLaporan')?>"class="btn btn-danger">Back <span class="glyphicon glyphicon-arrow-left"></a></span></td>
                         </center>
                         </div>
                     </div>
@@ -369,20 +354,47 @@
 
 <?php echo form_close(); ?>
 
-    <!-- End Realtime sts area-->
-    <!-- Start Footer area-->
     <div class="footer-copyright-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                    <div class="footer-copy-right">
-                        <p>Copyright © 2018 
-. Sistem Pelayanan Bantuan dan Pengajuan SKTM</a>.</p>
-                    </div>
+        <div class="container">     
+          <div class="col-md">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <h2 class="ftco-heading-2">Information</h2>
+              <ul class="list-unstyled">
+                <li><a href="https://www.google.com/maps/place/Social+Service+Batu+City/@-7.8661852,112.5132408,15z/data=!4m5!3m4!1s0x0:0xadce265e5e9d00de!8m2!3d-7.8661852!4d112.5132408" class="py-2 d-block"><font color="black"><h5>Alamat:</h5></font> Balai Kota Among Tani, Jl. Panglima Sudirman No.507, Pesanggrahan, Kec. Batu, Kota Batu, Jawa Timur 65314</a></li><br>
+               
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <h2 class="ftco-heading-2">Jam Buka</h2>
+              <ul class="list-unstyled">
+                <li><a href="#" class="py-2 d-block">Thursday    7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Friday  7AM–2PM</a></li>
+                <li><a href="#" class="py-2 d-block">Saturday    Closed</a></li>
+                <li><a href="#" class="py-2 d-block">Sunday  Closed</a></li>
+                <li><a href="#" class="py-2 d-block">Monday  7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Tuesday 7:30AM–4PM</a></li>
+                <li><a href="#" class="py-2 d-block">Wednesday   7:30AM–4PM</a></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+              <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <h2 class="ftco-heading-2">Contact Us</h2>
+                <div class="block-23 mb-3">
+                  <ul>
+                 <li><a href="#" class="py-2 d-block"><font color="black"><h5>Telepon:</h5></font>(0341) 592200</a></li>
+
+
+                  </ul>
                 </div>
             </div>
+          </div>
         </div>
-    </div>
+    
     <!-- End Footer area-->
     <!-- jquery
     ============================================ -->
@@ -486,7 +498,6 @@
     <script src="<?php echo base_url() ?>assets/js/main.js"></script>
     <!-- tawk chat JS
         ============================================ -->
-    <script src="<?php echo base_url() ?>assets/js/tawk-chat.js"></script>
 </body>
 
 </html>

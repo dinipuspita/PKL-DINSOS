@@ -97,7 +97,7 @@
                 <br>
                  <center><span class="glyphicon glyphicon-user" size="20px"></span>
                     jika Anda  Belum Mempunyai Akun
-                    <br><h5><a href="<?php echo base_url('index.php/register/')?>">silahkan daftar disini!</a></li></a></br></h5>
+                    <br><h5><a href="<?php echo base_url('index.php/register/create')?>">silahkan daftar disini!</a></li></a></br></h5>
                 </center>
 
             </div>

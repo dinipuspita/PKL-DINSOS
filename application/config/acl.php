@@ -63,8 +63,23 @@ $acl = array(
 	'admin' => array(
 		'1' => true,
 		'2' => true,
+	),
+	'ListKecamatan' => array(
+		'1' => true,
+		'2' => false,
+	),
+	'ListProfil' => array(
+		'1' => true,
+		'2' => true,
+	),
+	'ListLaporan' => array(
+		'1' => true,
+		'2' => true,
+	),
+	'ListTksk' => array(
+		'1' => true,
+		'2' => false,
 	)
-
 
 );
 
